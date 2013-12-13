@@ -11,7 +11,7 @@ test('default', function (t) {
   el.addEventListener("test-event1", function(e) {
     t.equal(e.bubbles,    false);
     t.equal(e.cancelable, false);
-    t.equal(e.detail,     null);
+    t.equal(e.detail,     undefined);
     t.end();
   }, true);
 

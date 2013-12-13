@@ -1,4 +1,6 @@
-if(!window.CustomEvent) {
+try {
+  new CustomEvent("test");
+} catch(err) {
   window.CustomEvent = function(event, params) {
     if(!params) {
       params = {
