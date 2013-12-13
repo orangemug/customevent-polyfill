@@ -26,14 +26,14 @@ test('bubbles', function (t) {
   el.addEventListener("test-event2", function(e) {
     t.equal(e.bubbles,    true);
     t.equal(e.cancelable, false);
-    t.equal(e.detail,     undefined);
+    t.equal(e.detail,     null);
     t.end();
-  });
+  }, false);
 
   evt = new CustomEvent("test-event2", {
     bubbles: true,
     cancelable: false,
-    detail: undefined
+    detail: null
   });
   el.dispatchEvent(evt);
 });
@@ -45,14 +45,14 @@ test('cancelable', function (t) {
   el.addEventListener("test-event3", function(e) {
     t.equal(e.bubbles,    false);
     t.equal(e.cancelable, true);
-    t.equal(e.detail,     undefined);
+    t.equal(e.detail,     null);
     t.end();
-  });
+  }, false);
 
   evt = new CustomEvent("test-event3", {
     bubbles: false,
     cancelable: true,
-    detail: undefined
+    detail: null
   });
   el.dispatchEvent(evt);
 });
@@ -66,7 +66,7 @@ test('detail', function (t) {
     t.equal(e.cancelable, false);
     t.equal(e.detail,     "testing123");
     t.end();
-  });
+  }, false);
 
   evt = new CustomEvent("test-event4", {
     bubbles: false,
