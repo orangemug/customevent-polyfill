@@ -13,7 +13,9 @@
     "files": "test/index.js",
     "browsers": {
       "ie": [9, 10],
-      "firefox": "latest"
+      "firefox": "latest",
+      "android-browser": "4.2",
+      "iphone": "6.0"
     }
   },
   "scripts": {
