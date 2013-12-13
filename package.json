@@ -13,7 +13,7 @@
     "files": "test/index.js",
     "browsers": {
       "ie": [9, 10],
-      "ff": "latest"
+      "firefox": "latest"
     }
   },
   "scripts": {
