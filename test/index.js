@@ -11,7 +11,7 @@ test('default', function (t) {
   el.addEventListener("test-event1", function(e) {
     t.equal(e.bubbles,    false);
     t.equal(e.cancelable, false);
-    t.equal(e.detail,     undefined);
+    t.notOk(e.detail);
     t.end();
   }, true);
 
@@ -26,7 +26,7 @@ test('bubbles', function (t) {
   el.addEventListener("test-event2", function(e) {
     t.equal(e.bubbles,    true);
     t.equal(e.cancelable, false);
-    t.equal(e.detail,     null);
+    t.notOk(e.detail);
     t.end();
   }, false);
 
@@ -45,7 +45,7 @@ test('cancelable', function (t) {
   el.addEventListener("test-event3", function(e) {
     t.equal(e.bubbles,    false);
     t.equal(e.cancelable, true);
-    t.equal(e.detail,     null);
+    t.notOk(e.detail);
     t.end();
   }, false);
 
